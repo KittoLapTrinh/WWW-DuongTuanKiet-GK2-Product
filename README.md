@@ -5,3 +5,14 @@
 ## Class diagram
 ![class-diagram](https://github.com/user-attachments/assets/d15dc1fc-073b-4354-bc11-4a4b0f4bdcf3)
 
+## Database diagram
+![database-diagram](https://github.com/user-attachments/assets/2c7aabf5-8e2b-4a32-b017-1e51af0c3308)
+
+## List Product
+![image](https://github.com/user-attachments/assets/3f8a4e9c-04c0-410d-a5ac-69e001c77c16)
+
+## Detail Product
+![image](https://github.com/user-attachments/assets/6f78e716-8662-4c87-a2c9-63fbc9b01e00)
+
+
+
