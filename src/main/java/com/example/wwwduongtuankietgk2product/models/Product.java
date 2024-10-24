@@ -25,16 +25,16 @@ public class Product {
     private String unit;
     @Column(name = "manufacturer_name")
     private String manufacturerName;
-    @Column(name = "productStatus")
+    @Enumerated(EnumType.STRING)
     private ProductStatus productStatus;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<ProductImage> productImages;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<ProductPrice> productPrices;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     private List<OrderDetail> orderDetails;
 
     public Product() {
@@ -46,6 +46,15 @@ public class Product {
         this.unit = unit;
         this.manufacturerName = manufacturerName;
         this.productStatus = productStatus;
+    }
+
+    public Product(String name, String description, String unit, String manufacturerName, ProductStatus productStatus, List<ProductPrice> productPrices) {
+        this.name = name;
+        this.description = description;
+        this.unit = unit;
+        this.manufacturerName = manufacturerName;
+        this.productStatus = productStatus;
+        this.productPrices = productPrices;
     }
 
     public Product(String name, String description, String unit, String manufacturerName, ProductStatus productStatus, List<ProductImage> productImages, List<ProductPrice> productPrices, List<OrderDetail> orderDetails) {

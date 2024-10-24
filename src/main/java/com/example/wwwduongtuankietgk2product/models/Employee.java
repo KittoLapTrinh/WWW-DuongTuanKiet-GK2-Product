@@ -20,9 +20,9 @@ public class Employee {
     private String phone;
     private String address;
     @Enumerated(EnumType.STRING)
-    private EmployeeStatus status;
+    private EmployeeStatus employeeStatus;
 
-    @OneToMany(mappedBy = "employee")
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
     private List<Order> orders;
 
 }
