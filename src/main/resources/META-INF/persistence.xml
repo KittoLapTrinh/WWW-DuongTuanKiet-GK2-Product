@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+    <persistence-unit name="default">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.example.wwwduongtuankietgk2product.models.Product</class>
+        <class>com.example.wwwduongtuankietgk2product.enums.ProductStatus</class>
+        <class>com.example.wwwduongtuankietgk2product.models.ProductImage</class>
+        <class>com.example.wwwduongtuankietgk2product.models.ProductPrice</class>
+        <class>com.example.wwwduongtuankietgk2product.enums.EmployeeStatus</class>
+        <class>com.example.wwwduongtuankietgk2product.models.Employee</class>
+        <class>com.example.wwwduongtuankietgk2product.models.Order</class>
+        <class>com.example.wwwduongtuankietgk2product.models.OrderDetail</class>
+        <class>com.example.wwwduongtuankietgk2product.models.Customer</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver"
+                      value="org.mariadb.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url"
+                      value="jdbc:mariadb://localhost:3306/gk2?createDatabaseIfNotExist=true"/>
+            <property name="jakarta.persistence.jdbc.user" value="sa"/>
+            <property name="jakarta.persistence.jdbc.password"
+                      value="sapassword"/>
+            <!--show query-->
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+        </properties>
+    </persistence-unit>
+</persistence>
