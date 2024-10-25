@@ -10,5 +10,6 @@
 <br/>
 <a href="hello-servlet">Hello Servlet</a><br>
 <a href="page?action=product">Product</a><br>
+<a href="page?action=report1">Report 1</a><br>
 </body>
 </html>

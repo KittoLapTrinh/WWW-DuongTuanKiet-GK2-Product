@@ -45,10 +45,18 @@ public class PageServlet extends HttpServlet {
                 case "product-detail":
                     handleActionProductDetail(req, resp);
                     break;
+                case "report1":
+                    handleGetReport1(req, resp);
+                    break;
             }
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private void handleGetReport1(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String page = "/report/report1.jsp";
+        fowardToPage(page ,req, resp);
     }
 
     private void handleActionProductDetail(HttpServletRequest req, HttpServletResponse resp) throws Exception {
@@ -75,6 +83,32 @@ public class PageServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        try{
+            String action = req.getParameter("action");
+            if(action == null){
+                PrintWriter out = resp.getWriter();
+                out.println("<html><body>");
+                out.println("<h1>"+message+"<h1>");
+                out.println("</html></body>");
+                return;
+            }switch (action){
+                case "report1":
+                    handleReportFileterProductByStatus(req, resp);
+                    break;
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
+    private void handleReportFileterProductByStatus(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        ProductService service = new ProductServiceImpl();
+        int status = Integer.parseInt(req.getParameter("status"));
+        System.out.println(status);
+        List<Product> productsByStatus = service.findProductByStatus(status);
+        req.setAttribute("product", productsByStatus);
+        String page = "/report/report1.jsp";
+        System.out.println(productsByStatus);
+        fowardToPage(page ,req, resp);
     }
 }

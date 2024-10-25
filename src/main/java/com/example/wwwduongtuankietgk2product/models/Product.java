@@ -10,6 +10,8 @@ import java.util.List;
 @NamedQueries({
         @NamedQuery(name = "Product.findProductByStatus",
                 query = "select p from Product p where p.productStatus =: productStatus"),
+        @NamedQuery(name = "Product.findProductWithPriceGeaterThan",
+                query = "select p from Product p JOIN p.productPrices pp where pp.price >: price"),
         @NamedQuery(name = "Product.getProductIdAndNameInProductPrice",
                 query = "select p.name, p.id from Product p where p.id IN (select DISTINCT pp.product.id from ProductPrice pp)"
         )

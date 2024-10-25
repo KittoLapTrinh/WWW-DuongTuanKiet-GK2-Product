@@ -24,6 +24,7 @@
                 <th>Name</th>
                 <th>Unit</th>
                 <th>Status</th>
+                <th>Detail</th>
             </tr>
         </thead>
         <tbody>
@@ -38,6 +39,7 @@
                <td><%=p.getManufacturerName()%></td>
                <td><%=p.getName()%></td>
                <td><%=p.getUnit()%></td>
+               <td><%=p.getProductStatus()%></td>
                <td><a href="page?action=product-detail&id=<%=p.getId()%>">See Detail</a> </td>
            </tr>
            <%

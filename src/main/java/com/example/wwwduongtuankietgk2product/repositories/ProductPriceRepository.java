@@ -8,4 +8,6 @@ public class ProductPriceRepository extends CRUDRepository<ProductPrice> {
     public ProductPriceRepository(){
         EntityManager manager = ConnectDB.getInstance().getEntityManager();
     }
+
+
 }
