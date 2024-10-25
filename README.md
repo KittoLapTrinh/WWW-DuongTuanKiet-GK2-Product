@@ -9,10 +9,11 @@
 ![database-diagram](https://github.com/user-attachments/assets/2c7aabf5-8e2b-4a32-b017-1e51af0c3308)
 
 ## List Product
-![image](https://github.com/user-attachments/assets/3f8a4e9c-04c0-410d-a5ac-69e001c77c16)
+![image](https://github.com/user-attachments/assets/5eea2c17-27b6-49b9-b351-2ea15419bdaa)
 
 ## Detail Product
-![image](https://github.com/user-attachments/assets/6f78e716-8662-4c87-a2c9-63fbc9b01e00)
+![image](https://github.com/user-attachments/assets/80e03232-1c79-44ab-b481-cf2c9f83c5d7)
+
 
 
 
