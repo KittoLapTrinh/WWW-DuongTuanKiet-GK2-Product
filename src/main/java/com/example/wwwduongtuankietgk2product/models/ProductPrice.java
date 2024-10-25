@@ -7,10 +7,10 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "product_price")
 public class ProductPrice {
-    @Id
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
+    @Id
     @Column(name = "price_date_time")
     private LocalDate priceDateTime;
     private double price;
